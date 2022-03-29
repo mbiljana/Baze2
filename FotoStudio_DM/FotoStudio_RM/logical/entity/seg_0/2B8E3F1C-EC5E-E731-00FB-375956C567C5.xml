@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B8E3F1C-EC5E-E731-00FB-375956C567C5" name="Foto oprema">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 10:40:12 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="FO_SIF" id="C36C777E-5CE6-E9D2-F489-C108816D76D4">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 10:40:24 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FO_EKIPA" id="78C787E5-F213-1761-0FCA-080680092C4B">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 10:41:36 UTC</createdTime>
+<generatorID>1A9C0FE4-EA34-7EC2-1427-FC9A95F0CDF1</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>8F236F08-CE2E-DC67-9F34-0DEEBCB4AD21</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FO_STUDIO" id="BE764423-CDCA-4963-ED16-A3045552BC93">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 10:41:36 UTC</createdTime>
+<generatorID>1A9C0FE4-EA34-7EC2-1427-FC9A95F0CDF1</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>A5C7B6ED-4CB7-887C-A35C-8D65CF3B6FA9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="87A8D54D-37C0-017D-4E4F-82C743A1D45B" name="Foto oprema PK">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 10:40:33 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C36C777E-5CE6-E9D2-F489-C108816D76D4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

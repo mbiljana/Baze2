@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A1002FBF-952A-20FC-6FA9-27DF291C55F9" name="Postavlja">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 17:08:52 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PRIZ_SIF" id="9A7694C3-6757-E6A1-CC98-2501B7FDED5F">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 17:09:37 UTC</createdTime>
+<generatorID>79EAA048-AFD3-9C78-9867-C5EA71142C7B</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>131D71AA-8485-5D95-1F4C-F1A4F7CDBA67</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PODZ_SIF" id="555DFF22-9C42-7512-2F0A-C0AB1ECFAFC2">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 17:09:37 UTC</createdTime>
+<generatorID>79EAA048-AFD3-9C78-9867-C5EA71142C7B</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>F3EB7A50-0671-E7F4-02D5-AA9766D8DBA3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PZ_KLIJENT" id="3ECED981-1D4F-7F63-5159-D37D85F059DE">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 17:09:37 UTC</createdTime>
+<generatorID>79EAA048-AFD3-9C78-9867-C5EA71142C7B</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>4F2732FA-7716-CB7F-309E-9A712C07F75F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PZ_PROSLAVA" id="0E774722-DDDB-C089-9181-D8A45CAC4D27">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 17:09:37 UTC</createdTime>
+<generatorID>79EAA048-AFD3-9C78-9867-C5EA71142C7B</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>B5CF0C06-3110-50AD-A58D-A1BA7D607480</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="VL_JMBG" id="732FE7B3-C077-3256-3CB5-BEAF43E8F6E0">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 17:09:37 UTC</createdTime>
+<generatorID>79EAA048-AFD3-9C78-9867-C5EA71142C7B</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>F946419B-7F9D-154B-5FF3-6B29A1808236</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FOT_TIP" id="92BC8191-6001-34C2-71FE-8CA1381077A9">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-09 13:06:10 UTC</createdTime>
+<generatorID>3AD42855-5274-708F-4B81-F5B26111A88B</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>336595EE-6D6B-C8EF-D299-5825E34401E7</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>CCFD2ADE-FD67-66D7-2B2C-D09F26EE5313</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FA9B2EB0-06EF-C34F-9654-10BEFE86FA23" name="Postavlja PK">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 17:09:37 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9A7694C3-6757-E6A1-CC98-2501B7FDED5F</attributeRef>
+<attributeRef>555DFF22-9C42-7512-2F0A-C0AB1ECFAFC2</attributeRef>
+<attributeRef>3ECED981-1D4F-7F63-5159-D37D85F059DE</attributeRef>
+<attributeRef>0E774722-DDDB-C089-9181-D8A45CAC4D27</attributeRef>
+<attributeRef>732FE7B3-C077-3256-3CB5-BEAF43E8F6E0</attributeRef>
+<attributeRef>92BC8191-6001-34C2-71FE-8CA1381077A9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

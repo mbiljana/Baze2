@@ -1,0 +1,127 @@
+--podaci o proslavi : koji fotograf je radi, koliku platu dobija, ko je klijent, koja proslava je u pitanju
+create or replace view
+podaci_o_proslavi(Mbr_zaposlenog,Zaposleni,Plata_zaposlenog,Klijent,Sifra_proslave,Naziv_proslave) as
+select distinct z.zap_mbr,z.zap_ime || ' ' || z.zap_prz "Zaposleni",z.zap_plt Plata,z.kl_ime || ' ' || z.kl_prz "Klijent",z.pr_sif,p.tr_tip
+from
+(
+select z.zap_mbr,z.zap_ime, z.zap_prz,z.zap_plt,k.kl_ime, k.kl_prz ,z.pr_sif
+from
+(select z.zap_mbr,z.zap_ime,z.zap_prz,z.zap_plt,pr.pr_sif
+from zaposleni z right outer join postavlja pr
+on z.zap_mbr = pr.fot_tip) z right outer join
+(
+select k.kl_ime, k.kl_prz,p.pr_sif,p.fot_tip
+from klijent k right outer join postavlja p
+on k.kl_jmbg = p.kl_jmbg) k
+on z.pr_sif = k.pr_sif and z.zap_mbr = k.fot_tip
+) z
+left outer join 
+(select tr_tip,pr_sif
+from proslava) p
+on z.pr_sif = p.pr_sif;
+
+--racun koliku ce zaradu doneti sva vencanja ciji je zahtev podnet nakon 1. juna 2021. godine
+create or replace view
+zarada_vencanja(Zarada) as
+select distinct SUM(tr_cena)
+from
+(
+select p.tr_tip,p.podz_dat,t.kl_jmbg,tr_cena
+from
+(
+select p.tr_tip,pr.klijent_kl_jmbg,pr.podz_dat
+from podnosi_zahtev pr right outer join proslava p
+on pr.proslava_pr_sif = p.pr_sif
+where pr.podz_dat > TO_DATE('2021-06-01','YYYY-MM-DD')
+) p right outer join
+(
+select t.tr_sif,t.tr_cena,p.kl_jmbg
+from transakcija t right outer join prihvata_zahtev p
+on t.tr_sif = p.tr_sif
+) t
+on p.klijent_kl_jmbg = t.kl_jmbg
+)
+where tr_tip in ('VENCANJE');
+
+
+--ukupna zarada svih zaposlenih koji rade na odredjenom tipu proslave i koji ce zaraditi vise od 10 hiljada
+create or REPLACE view 
+zarada_zaposleni_po_proslavi(Naziv_proslave,Glavni_fotografi,Zarada_glavni,Retuseri,Zarada_retuseri,Prodavci,Zarada_prodavci,Pomocni_fotografi,Zarada_pomocni)as
+
+select t.tr_tip, Glavni_fotografi,Zarada_glavni,Retuseri,Zarada_retuseri,Prodavci,Zarada_prodavci,Pomocni_fotografi,Zarada_pomocni
+from
+(
+select p.pr_sif, Glavni_fotografi,Zarada_glavni,Retuseri,Zarada_retuseri,Prodavci,Zarada_prodavci,Pomocni_fotografi,Zarada_pomocni
+from
+(
+select p.pr_sif, Glavni_fotografi,Zarada_glavni,Retuseri,Zarada_retuseri
+from
+(
+select p.pr_sif, count(z.zap_mbr) Glavni_fotografi, sum(z.zap_plt)Zarada_glavni
+from postavlja p left outer join zaposleni z
+on p.fot_tip = z.zap_mbr
+group by pr_sif
+having sum(z.zap_plt)>10000
+order by pr_sif
+)p left outer join
+(
+select p.pr_sif, count(z.zap_mbr) Retuseri, sum(z.zap_plt)Zarada_retuseri
+from obradjuje p left outer join zaposleni z
+on p.zap_mbr = z.zap_mbr
+group by pr_sif
+having sum(z.zap_plt)>10000
+order by pr_sif
+)k
+on p.pr_sif = k.pr_sif
+)p
+left outer join
+(
+select p.pr_sif,Prodavci,Zarada_prodavci,Pomocni_fotografi,Zarada_pomocni
+from
+(
+select p.pr_sif, count(z.zap_mbr) Prodavci, sum(z.zap_plt)Zarada_prodavci
+from napravi p left outer join zaposleni z
+on p.zap_mbr = z.zap_mbr
+group by pr_sif
+having sum(z.zap_plt)>10000
+order by pr_sif
+)p
+left outer join
+(
+select p.pz_proslava, count(z.zap_mbr) Pomocni_fotografi, sum(z.zap_plt)Zarada_pomocni
+from asistira p left outer join zaposleni z
+on p.zap_mbr = z.zap_mbr
+group by pz_proslava
+having sum(z.zap_plt)>10000
+order by pz_proslava
+)k
+on p.pr_sif = k.pz_proslava
+) k
+on p.pr_sif = k.pr_sif
+) p
+left outer join
+(
+select pr_sif,tr_tip
+from proslava
+) t
+on p.pr_sif = t.pr_sif;
+
+--ukupan trosak vlasnika foto studia, tj. koliko ima radnika i koliko ce ukupno novca morati da im isplati na godisnjem nivou
+create or replace view trosak_vlasnika (Vlasnik,Broj_radnika,Trosak)
+as
+select vl_ime || ' ' || vl_prz "Vlasnik", Broj_radnika,Ukupan_trosak
+FROM
+(
+select fe.foto_studio_fs_vlasnik Vlasnik,count(zap_mbr) Broj_radnika,sum(zap_plt*12) Ukupan_trosak
+from zaposleni z left outer join foto_ekipa fe
+on z.foto_ekipa_fe_sif = fe.fe_sif
+group by fe.foto_studio_fs_vlasnik
+) s
+left outer join
+(
+select vl_ime,vl_prz,vl_jmbg
+from vlasnik
+)vl
+on vl_jmbg = s.Vlasnik;
+
+

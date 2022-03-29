@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="kreira" directorySegmentName="seg_0" id="7F262DE9-78B2-FF60-AE45-55EC086F6B1B">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 16:53:21 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<sourcePk>B979BDCF-08E1-D198-B910-249B0C18B4B8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F98CEFF3-302F-E827-74F1-A9BE9F4C7177</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>0E153FFC-6D61-C927-FCC7-E0F83F379246</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

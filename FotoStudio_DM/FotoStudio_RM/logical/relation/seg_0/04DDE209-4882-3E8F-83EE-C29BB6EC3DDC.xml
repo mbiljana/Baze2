@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="prodaje fotografije" directorySegmentName="seg_0" id="04DDE209-4882-3E8F-83EE-C29BB6EC3DDC">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 17:20:12 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<sourcePk>6DF75EA2-7603-6B92-E543-26780427CFC0</sourcePk>
+<targetPk>0D10DC04-BF04-EFCB-20AF-C4BB8EEFBE3C</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>24B843E5-FD04-8C2E-4BD3-11B2B45DEFD6</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>2DDD7F08-8036-5E84-D8B3-5861D4B15562</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

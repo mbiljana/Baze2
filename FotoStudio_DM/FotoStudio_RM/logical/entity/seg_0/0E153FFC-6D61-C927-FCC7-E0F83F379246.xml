@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0E153FFC-6D61-C927-FCC7-E0F83F379246" name="Prihvata zahtev">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 10:58:04 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PRIZ_SIF" id="131D71AA-8485-5D95-1F4C-F1A4F7CDBA67">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 10:58:17 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TR_SIF" id="3D4090C9-C3EE-8D76-A926-5BC84686192E">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 16:53:21 UTC</createdTime>
+<generatorID>7F262DE9-78B2-FF60-AE45-55EC086F6B1B</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>8CFEA4FD-DBBB-4763-9B9F-67C66AB92FEA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PODZ_SIF" id="F3EB7A50-0671-E7F4-02D5-AA9766D8DBA3">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 16:56:42 UTC</createdTime>
+<generatorID>3F15B550-F8B0-1369-F113-F8FFC8327A01</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>802AE5C7-D60D-AAD9-E3D4-7A5E38C12A98</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PZ_KLIJENT" id="4F2732FA-7716-CB7F-309E-9A712C07F75F">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 16:56:42 UTC</createdTime>
+<generatorID>3F15B550-F8B0-1369-F113-F8FFC8327A01</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>7D8DC4FB-3A26-2BD2-AF9A-809ECCC90B3E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PZ_PROSLAVA" id="B5CF0C06-3110-50AD-A58D-A1BA7D607480">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 16:56:42 UTC</createdTime>
+<generatorID>3F15B550-F8B0-1369-F113-F8FFC8327A01</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>559AC8FB-659B-E4FD-21E3-04B8A2D6D43E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="VL_JMBG" id="F946419B-7F9D-154B-5FF3-6B29A1808236">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 16:57:22 UTC</createdTime>
+<generatorID>8226A263-D20C-BD0C-F1E1-BFF9056A93B6</generatorID>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="true"/>
+</engineerTo>
+<referedAttribute>C7AC0033-82AA-329A-A2D3-8A07B2162FB8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FB7C83E8-89AF-ED1A-767C-74A40A119153" name="Prihvata zahtev PK">
+<createdBy>Home</createdBy>
+<createdTime>2022-01-03 10:58:29 UTC</createdTime>
+<ownerDesignName>FotoStudio_RM</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A93AEA12-56C8-9F9B-3974-5D41D77368BA" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>131D71AA-8485-5D95-1F4C-F1A4F7CDBA67</attributeRef>
+<attributeRef>F3EB7A50-0671-E7F4-02D5-AA9766D8DBA3</attributeRef>
+<attributeRef>4F2732FA-7716-CB7F-309E-9A712C07F75F</attributeRef>
+<attributeRef>B5CF0C06-3110-50AD-A58D-A1BA7D607480</attributeRef>
+<attributeRef>F946419B-7F9D-154B-5FF3-6B29A1808236</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
